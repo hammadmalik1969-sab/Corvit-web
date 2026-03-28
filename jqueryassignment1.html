@@ -1,0 +1,58 @@
+ inygit<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Home</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body {
+      text-align: center;
+      padding-top: 100px;
+      transition: 0.3s;
+    }
+
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+
+    img {
+      width: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="powerBtn" class="btn btn-dark m-2">
+    Toggle Power
+  </button>
+
+  <button id="hideBtn" class="btn btn-danger m-2">
+    Hide Controls
+  </button>
+
+  <br>
+
+  <img id="fan" src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png" alt="fan">
+
+  <script>
+    // Toggle light/dark
+    $("#powerBtn").click(function() {
+      $("body").toggleClass("dark-mode");
+    });
+
+    // Hide/show fan
+    $("#hideBtn").click(function() {
+      $("#fan").fadeToggle();
+    });
+  </script>
+
+</body>
+</html>
